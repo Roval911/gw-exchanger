@@ -1,9 +1,11 @@
 module gw-exchanger
 
-go 1.23.1
+go 1.23.3
+
+toolchain go1.23.4
 
 require (
-	github.com/Roval911/proto-exchange v0.0.0-20241230215338-21f8c5177104 // indirect
+	github.com/Roval911/proto-exchange v0.0.0-20241231072508-76cc796769ee // indirect
 	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect

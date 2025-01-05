@@ -1,16 +1,17 @@
 package config
 
 import (
+	"log"
+
 	"github.com/joho/godotenv"
 	"github.com/kelseyhightower/envconfig"
-	"log"
 )
 
 type Config struct {
 	DB Postgres
 
 	Server struct {
-		Port      int    `envconfig:"SERVER_PORT" default:"8080"`
+		Port      int    `envconfig:"SERVER_PORT" default:"8081"`
 		JWTSecret string `envconfig:"JWT_SECRET" required:"true"`
 	}
 }

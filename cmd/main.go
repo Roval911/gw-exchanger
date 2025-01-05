@@ -42,7 +42,7 @@ func main() {
 	storage := postgres.NewPostgresStorage(db)
 
 	// Запуск миграций
-	//postgres.RunMigrations()
+	postgres.RunMigrations()
 
 	// Создание gRPC сервера
 	grpcServer := grpc.NewServer()
@@ -55,7 +55,7 @@ func main() {
 	// Открываем порт для сервера
 	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", cfg.Server.Port))
 	if err != nil {
-		log.Fatalf("Ошибка при запуске сервера: %v", err)
+		log.Fatalf("Ошибка при запуске сервера на порту %d: %v", cfg.Server.Port, err)
 	}
 
 	// Запуск gRPC сервера
